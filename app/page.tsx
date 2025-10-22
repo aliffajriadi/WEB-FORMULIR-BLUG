@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* Section: Webinar Akan Datang */}
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-        Webinar Akan Datang
+        Webinar Yang Akan Datang
       </h2>
 
       {/* Grid Webinar Akan Datang */}
@@ -55,6 +55,7 @@ export default function Home() {
               <Image
                 src={item.gambar}
                 alt={item.judul}
+                loading="lazy"
                 width={400}
                 height={300}
                 className="object-contain w-full h-full"
@@ -96,6 +97,7 @@ export default function Home() {
               <Image
                 src={item.gambar}
                 alt={item.judul}
+                loading="lazy"
                 width={400}
                 height={300}
                 className="object-contain w-full h-full"
