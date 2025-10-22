@@ -123,6 +123,7 @@ export default function DaftarPages() {
       return;
     }
     setIsLoading(true);
+    console.log(form)
 
     // lanjut kirim data
     try {
