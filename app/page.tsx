@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { CalendarIcon, ClockIcon, MapPinIcon, UsersIcon, DollarSignIcon } from "lucide-react";
+import { CalendarIcon, ClockIcon, MapPinIcon, UsersIcon, DollarSignIcon, MoveRightIcon } from "lucide-react";
 import Image from "next/image";
 import { webinar, webinarOverdue } from "@/lib/dataWebinar";
 import Link from "next/link";
@@ -18,6 +18,8 @@ export default function Home() {
         </h1>
         <p className="text-gray-600 max-w-md mx-auto">
           Temukan wawasan baru seputar dunia open source dan teknologi modern.
+          <br />
+          <span className="text-green-500">GO OPEN SOURCEE</span>
         </p>
       </div>
 
@@ -117,6 +119,9 @@ export default function Home() {
               <li className="flex items-center gap-x-1"><DollarSignIcon size={15}/> Biaya: <b>{item.biaya}</b></li>
             </ul>
             <Button className="mt-2" disabled={true} variant="default">Webinar telah selesai</Button>
+            <Button asChild variant="link" className="mt-2 opacity-100 text-green-500">
+              <Link href={`/review/${item.slug}`}>Cek Webinar <MoveRightIcon size={15}/></Link>
+            </Button>
           </div>
         ))}
       </div>

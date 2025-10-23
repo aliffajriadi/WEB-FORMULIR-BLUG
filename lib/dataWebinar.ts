@@ -47,7 +47,7 @@ const webinar = [
       pendaftaran: "1 Juni - 12 Juni 2025",
       pukul: "13.00 WIB",
       biaya: "Gratis",
-      slug: "mengenal-konsep-mvc-laravel",
+      slug: "about-reactjs",
       gambar: "/webinar-reactjs.jpeg",
     },
     {
@@ -59,7 +59,7 @@ const webinar = [
       pendaftaran: "-",
       pukul: "10.00 WIB",
       biaya: "Gratis",
-      slug: "mengenal-konsep-mvc-laravel",
+      slug: "flutter",
       gambar: "/webinar-flutter.jpeg",
     },
     {
