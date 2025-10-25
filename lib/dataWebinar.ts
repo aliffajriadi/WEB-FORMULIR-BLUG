@@ -9,7 +9,7 @@ const webinar = [
       pukul: "13.00 WIB",
       biaya: "1 Miliyar Rupiah",
       slug: "pemrograman-web",
-      gambar: "/silver.jpeg",
+      gambar: "/bahlil.jpeg",
     },
   ];
 
