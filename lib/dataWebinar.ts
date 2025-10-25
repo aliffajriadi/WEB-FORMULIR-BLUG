@@ -4,7 +4,7 @@ const webinar = [
       judul: "Terimakasih pak Bagas Satrioo",
       pelaksanaan: "Senin, 10 Januari 2026",
       tempat: "Online Zoom",
-      deskripsi: "Belajar pemrograman web dengan HTML, CSS, dan JavaScript.",
+      deskripsi: "Campurann Bensin dengan 10% Air Mani",
       pendaftaran: "1 - 10 Januari 2026",
       pukul: "13.00 WIB",
       biaya: "1 Miliyar Rupiah",

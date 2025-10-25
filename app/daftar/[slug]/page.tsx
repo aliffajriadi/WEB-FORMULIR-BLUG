@@ -163,7 +163,7 @@ export default function DaftarPages() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 text-center mb-8 md:mb-12">
           Formulir Pendaftaran Webinar{" "}
-          <span className="text-primary block sm:inline mt-2 sm:mt-0">
+          <span className="text-green-500 block sm:inline mt-2 sm:mt-0">
             {data.judul}
           </span>
         </h1>
@@ -186,11 +186,14 @@ export default function DaftarPages() {
                 <strong>Pelaksanaan:</strong> {data.pelaksanaan}
               </p>
               <p>
+                <strong>Pukul:</strong> {data.pukul}
+              </p>
+              <p>
                 <strong>Tempat:</strong> {data.tempat}
               </p>
               <p>
                 <strong>Biaya:</strong>{" "}
-                <span className="text-primary font-semibold text-lg">
+                <span className="text-green-500 font-semibold text-lg">
                   {data.biaya}
                 </span>
               </p>
