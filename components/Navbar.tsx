@@ -43,7 +43,7 @@ function Content() {
         className="underline text-blue-600 hover:text-blue-800"
         target="_blank"
       >
-        https://blug.polibatam.ac.id
+        blug.polibatam.ac.id
       </a>
       <Instagram className="w-4 h-4 ml-4" />
       <p>Kunjungi Instagram resmi Batam Linux User Group di</p>

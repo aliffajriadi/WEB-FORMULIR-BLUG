@@ -25,6 +25,7 @@ export default function DaftarPages() {
     status: "",
     sumber: "",
     yakin: false,
+    asal_instansi: "",
   });
 
   const [errors, setErrors] = useState({
@@ -34,6 +35,7 @@ export default function DaftarPages() {
     status: "",
     sumber: "",
     yakin: "",
+    asal_instansi: "",
   });
 
   // --- VALIDASI ---
@@ -136,6 +138,7 @@ export default function DaftarPages() {
         status: "",
         sumber: "",
         yakin: false,
+        asal_instansi: "",
       });
       toast.success("Formulir berhasil dikirim. Silahkan Cek Whatsapp kamu.");
     } catch (error) {
@@ -163,7 +166,7 @@ export default function DaftarPages() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 text-center mb-8 md:mb-12">
           Formulir Pendaftaran Webinar{" "}
-          <span className="text-green-500 block sm:inline mt-2 sm:mt-0">
+          <span className="text-orange-400 block sm:inline mt-2 sm:mt-0">
             {data.judul}
           </span>
         </h1>
@@ -257,6 +260,17 @@ export default function DaftarPages() {
                 ]}
                 error={errors.status}
                 required
+              />
+
+              {/* WHATSAPP */}
+              <FormInput
+                label="Asal Instansi"
+                name="asal_instansi"
+                type="string"
+                value={form.asal_instansi}
+                onChange={handleChange}
+                placeholder="(opsional)"
+                error={errors.asal_instansi}
               />
 
               {/* SUMBER INFO */}

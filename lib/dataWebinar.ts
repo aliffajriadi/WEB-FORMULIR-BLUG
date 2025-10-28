@@ -1,15 +1,15 @@
 const webinar = [
     {
       id: 1,
-      judul: "Terimakasih pak Bagas Satrioo",
-      pelaksanaan: "Senin, 10 Januari 2026",
+      judul: "Cicip Programing Pemula: Fast build app with Laravel Vibe Coding",
+      pelaksanaan: "Sabtu, 1 November 2025",
       tempat: "Online Zoom",
-      deskripsi: "Campurann Bensin dengan 10% Air Mani",
-      pendaftaran: "1 - 10 Januari 2026",
+      deskripsi: "Masih pemula tapi pengen bikin aplikasi web cepet? yuukk gabung webinar bersama dari Developer yang berpengalaman.",
+      pendaftaran: "29 - 1 November 2025",
       pukul: "13.00 WIB",
-      biaya: "1 Miliyar Rupiah",
-      slug: "pemrograman-web",
-      gambar: "/bahlil.jpeg",
+      biaya: "GRATIS",
+      slug: "webinar-laravel-vibecode",
+      gambar: "/webinar-laravel-vibecode.jpeg",
     },
   ];
 
@@ -93,7 +93,7 @@ const webinar = [
       id: 1,
       name: "Bagas Satrio",
       email: "tN2lT@example.com",
-      phone: "1234567890",
+      phone: "081267126694",
     },
     {
       id: 2,
