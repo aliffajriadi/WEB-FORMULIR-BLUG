@@ -15,6 +15,7 @@ export default function DaftarPages() {
   const slug = params.slug as string;
   const data = webinar.find((item) => item.slug === slug);
   const [isLoading, setIsLoading] = useState(false);
+  const [showWhatsappLink, setShowWhatsappLink] = useState(false);
 
   // --- STATE ---
   const [form, setForm] = useState({
@@ -125,7 +126,7 @@ export default function DaftarPages() {
       return;
     }
     setIsLoading(true);
-    console.log(form)
+    console.log(form);
 
     // lanjut kirim data
     try {
@@ -140,6 +141,7 @@ export default function DaftarPages() {
         yakin: false,
         asal_instansi: "",
       });
+      setShowWhatsappLink(true);
       toast.success("Formulir berhasil dikirim. Silahkan Cek Whatsapp kamu.");
     } catch (error) {
       console.error(error);
@@ -208,6 +210,19 @@ export default function DaftarPages() {
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 sm:mb-6">
               Isi Data Pendaftaran
             </h2>
+            {showWhatsappLink && (
+              <div className="mb-4 flex items-center bg-green-200 p-4 rounded-md gap-2">
+                <p className="font-semibold">Link Grup WhatsApp:</p>
+                <a
+                  href="https://chat.whatsapp.com/Dtj5LeknAoJ3QcMM2LES8L?mode=wwt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  Join Sekarang
+                </a>
+              </div>
+            )}
 
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               {/* NAMA */}
@@ -326,6 +341,19 @@ export default function DaftarPages() {
             </form>
 
             <div className="text-gray-500 text-sm mt-4">
+              {showWhatsappLink && (
+              <div className="mb-4 flex items-center bg-green-200 p-4 rounded-md gap-2">
+                <p className="font-semibold">Link Grup WhatsApp:</p>
+                <a
+                  href="https://chat.whatsapp.com/Dtj5LeknAoJ3QcMM2LES8L?mode=wwt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  Join Sekarang
+                </a>
+              </div>
+            )}
               <p>Ada masalah saat pendaftaran? Hubungi:</p>
               {contactPerson.map((item) => (
                 <p key={item.id}>
