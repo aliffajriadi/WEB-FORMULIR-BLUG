@@ -1,19 +1,20 @@
-const webinar = [
-    {
-      id: 1,
-      judul: "Cicip Programing Pemula: Fast build app with Laravel Vibe Coding",
-      pelaksanaan: "Sabtu, 1 November 2025",
-      tempat: "Online Zoom",
-      deskripsi: "Masih pemula tapi pengen bikin aplikasi web cepet? yuukk gabung webinar bersama dari Developer yang berpengalaman.",
-      pendaftaran: "29 - 1 November 2025",
-      pukul: "13.00 WIB",
-      biaya: "GRATIS",
-      slug: "webinar-laravel-vibecode",
-      gambar: "/webinar-laravel-vibecode.jpeg",
-    },
+interface Webinar {
+  id: number;
+  judul: string;
+  pelaksanaan: string;
+  tempat: string;
+  deskripsi: string;
+  pendaftaran: string;
+  pukul: string;
+  biaya: string;
+  slug: string;
+  gambar: string;
+}
+const webinar : Webinar[] = [
+
   ];
 
-  const webinarOverdue = [
+  const webinarOverdue : Webinar[] = [
     {
       id: 1,
       judul: "FrontEnd Web dengan Next.js",
@@ -28,6 +29,18 @@ const webinar = [
     },
     {
       id: 2,
+      judul: "Cicip Programing Pemula: Fast build app with Laravel Vibe Coding",
+      pelaksanaan: "Sabtu, 1 November 2025",
+      tempat: "Online Zoom",
+      deskripsi: "Masih pemula tapi pengen bikin aplikasi web cepet? yuukk gabung webinar bersama dari Developer yang berpengalaman.",
+      pendaftaran: "29 - 1 November 2025",
+      pukul: "13.00 WIB",
+      biaya: "GRATIS",
+      slug: "webinar-laravel-vibecode",
+      gambar: "/webinar-laravel-vibecode.jpeg",
+    },
+    {
+      id: 3,
       judul: "Mengenal Konsep MVC & Laravel",
       pelaksanaan: "Rabu, 12 Juni 2025",
       tempat: "Online Zoom",
@@ -39,7 +52,7 @@ const webinar = [
       gambar: "/webinar-laravel.jpeg",
     },
     {
-      id: 3,
+      id: 4,
       judul: "About React.js",
       pelaksanaan: "Rabu, 12 Juni 2025",
       tempat: "Online Zoom",
@@ -51,7 +64,7 @@ const webinar = [
       gambar: "/webinar-reactjs.jpeg",
     },
     {
-      id: 4,
+      id: 5,
       judul: "Create your Mobile Firts App with Flutter",
       pelaksanaan: "-",
       tempat: "Politeknik Negeri Batam",
@@ -63,7 +76,7 @@ const webinar = [
       gambar: "/webinar-flutter.jpeg",
     },
     {
-      id: 5,
+      id: 6,
       judul: "Tailwind CSS for FrontEnd Development",
       pelaksanaan: "11 Mei 2024",
       tempat: "Polibatam TA 10.3",
@@ -75,7 +88,7 @@ const webinar = [
       gambar: "/webinar-tailwindcss.jpeg",
     },
     {
-      id: 6,
+      id: 7,
       judul: "Menjadi Programer di tengah Gempuran AI",
       pelaksanaan: "-",
       tempat: "Online Zoom",

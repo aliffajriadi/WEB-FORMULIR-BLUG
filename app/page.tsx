@@ -6,10 +6,10 @@ import { webinar, webinarOverdue } from "@/lib/dataWebinar";
 import Link from "next/link";
 
 export default function Home() {
-
   return (
     <div className="min-h-screen py-16 px-6 flex flex-col items-center">
       <Navbar />
+
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-800 mb-3">
@@ -46,41 +46,56 @@ export default function Home() {
         Webinar Yang Akan Datang
       </h2>
 
-      {/* Grid Webinar Akan Datang */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mb-16">
-        {webinar.map((item) => (
-          <div
-            key={item.id}
-            className="bg-white shadow-lg rounded-2xl p-6 border border-gray-100 hover:shadow-xl transition flex flex-col items-center"
-          >
-            <div className="bg-gray-100 rounded-xl w-full aspect-[4/3] overflow-hidden mb-5">
-              <Image
-                src={item.gambar}
-                alt={item.judul}
-                loading="lazy"
-                width={400}
-                height={300}
-                className="object-contain w-full h-full"
-              />
+        {webinar && webinar.length > 0 ? (
+          webinar.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white shadow-lg rounded-2xl p-6 border border-gray-100 hover:shadow-xl transition flex flex-col items-center"
+            >
+              <div className="bg-gray-100 rounded-xl w-full aspect-[4/3] overflow-hidden mb-5">
+                <Image
+                  src={item.gambar}
+                  alt={item.judul}
+                  loading="lazy"
+                  width={400}
+                  height={300}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <p className="text-lg font-medium text-gray-800 text-center">
+                {item.judul}
+              </p>
+              <p className="text-gray-500 text-sm text-center mb-4">
+                {item.deskripsi}
+              </p>
+              <ul className="text-gray-500 text-sm mb-4 text-start">
+                <li className="flex items-center gap-x-1">
+                  <CalendarIcon size={15} /> Pelaksanaan: <b>{item.pelaksanaan}</b>
+                </li>
+                <li className="flex items-center gap-x-1">
+                  <ClockIcon size={15} /> Jam: <b>{item.pukul}</b>
+                </li>
+                <li className="flex items-center gap-x-1">
+                  <MapPinIcon size={15} /> Tempat: <b>{item.tempat}</b>
+                </li>
+                <li className="flex items-center gap-x-1">
+                  <UsersIcon size={15} /> Pendaftaran: <b>{item.pendaftaran}</b>
+                </li>
+                <li className="flex items-center gap-x-1">
+                  <DollarSignIcon size={15} /> Biaya: <b>{item.biaya}</b>
+                </li>
+              </ul>
+              <Button variant="default" asChild className="cursor-pointer">
+                <Link href={`/daftar/${item.slug}`}>Daftar Sekarang</Link>
+              </Button>
             </div>
-            <p className="text-lg font-medium text-gray-800 text-center">
-              {item.judul}
-            </p>
-            <p className="text-gray-500 text-sm text-center mb-4">
-              {item.deskripsi}
-            </p>
-            <ul className="text-gray-500 text-sm mb-4 text-start">
-              <li className="flex items-center gap-x-1"><CalendarIcon size={15}/> Pelaksanaan: <b>{item.pelaksanaan}</b></li>
-              <li className="flex items-center gap-x-1"><ClockIcon size={15}/> Jam: <b>{item.pukul}</b></li>
-              <li className="flex items-center gap-x-1"><MapPinIcon size={15}/> Tempat: <b>{item.tempat}</b></li>
-              <li className="flex items-center gap-x-1"><UsersIcon size={15}/> Pendaftaran: <b>{item.pendaftaran}</b></li>
-              <li className="flex items-center gap-x-1"><DollarSignIcon size={15}/> Biaya: <b>{item.biaya}</b></li>
-            </ul>
-            <Button variant="default" asChild className="cursor-pointer">
-              <Link href={`/daftar/${item.slug}`}>Daftar Sekarang</Link>
-            </Button>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className="text-gray-600 text-center col-span-3">
+            Belum ada Webinar saat ini tunggu webinar selanjutnya yaa :)
+          </p>
+        )}
       </div>
 
       {/* Section: Webinar Selesai */}
@@ -88,7 +103,6 @@ export default function Home() {
         Webinar Sebelumnya
       </h2>
 
-      {/* Grid Webinar Sebelumnya */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {webinarOverdue.map((item) => (
           <div
@@ -112,15 +126,29 @@ export default function Home() {
               {item.deskripsi}
             </p>
             <ul className="text-gray-500 text-sm text-start">
-              <li className="flex items-center gap-x-1"><CalendarIcon size={15}/> Pelaksanaan: <b>{item.pelaksanaan}</b></li>
-              <li className="flex items-center gap-x-1"><ClockIcon size={15}/> Jam: <b>{item.pukul}</b></li>
-              <li className="flex items-center gap-x-1"><MapPinIcon size={15}/> Tempat: <b>{item.tempat}</b></li>
-              <li className="flex items-center gap-x-1"><UsersIcon size={15}/> Pendaftaran: <b>{item.pendaftaran}</b></li>
-              <li className="flex items-center gap-x-1"><DollarSignIcon size={15}/> Biaya: <b>{item.biaya}</b></li>
+              <li className="flex items-center gap-x-1">
+                <CalendarIcon size={15} /> Pelaksanaan: <b>{item.pelaksanaan}</b>
+              </li>
+              <li className="flex items-center gap-x-1">
+                <ClockIcon size={15} /> Jam: <b>{item.pukul}</b>
+              </li>
+              <li className="flex items-center gap-x-1">
+                <MapPinIcon size={15} /> Tempat: <b>{item.tempat}</b>
+              </li>
+              <li className="flex items-center gap-x-1">
+                <UsersIcon size={15} /> Pendaftaran: <b>{item.pendaftaran}</b>
+              </li>
+              <li className="flex items-center gap-x-1">
+                <DollarSignIcon size={15} /> Biaya: <b>{item.biaya}</b>
+              </li>
             </ul>
-            <Button className="mt-2" disabled={true} variant="default">Webinar telah selesai</Button>
-            <Button asChild variant="link" className="mt-2 opacity-100 text-green-500">
-              <Link href={`/review/${item.slug}`}>Cek Webinar <MoveRightIcon size={15}/></Link>
+            <Button className="mt-2" disabled variant="default">
+              Webinar telah selesai
+            </Button>
+            <Button asChild variant="link" className="mt-2 text-green-500 gap-1">
+              <Link href={`/review/${item.slug}`}>
+                Cek Webinar <MoveRightIcon size={15} />
+              </Link>
             </Button>
           </div>
         ))}
